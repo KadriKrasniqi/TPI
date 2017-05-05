@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root text="&#34;4 images 1 mot&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<parallel text="&#34;2&#34;" comment="" color="ffffff">
+			<qPara>
+				<alternative text="&#34;Si l'utilisateur souhaite jouer&#34;" comment="&#34;&#34;" color="ffffff">
+					<qTrue>
+						<while text="&#34;tant que l'utilisateur ne quitte pas la partie&#34;" comment="" color="ffffff">
+							<qWhile>
+								<instruction text="&#34;Choisir un thème&#34;" comment="" color="ffffff" rotated="0"></instruction>
+								<while text="&#34;tant qu'il reste encore des mots du thème choisi&#34;" comment="" color="ffffff">
+									<qWhile>
+										<instruction text="&#34;Affichage des images et de la liste de lettres&#34;" comment="" color="ffffff" rotated="0"></instruction>
+										<while text="&#34;tant que l'utilisateur n'a pas trouver le bon mot&#34;" comment="" color="ffffff">
+											<qWhile>
+												<alternative text="&#34;Si l'utilisateur trouve le bon mot&#34;" comment="" color="ffffff">
+													<qTrue>
+														<instruction text="&#34;L'utilisateur gagne le point&#34;" comment="" color="ffffff" rotated="0"></instruction>
+													</qTrue>
+													<qFalse>
+														<instruction text="&#34;L'utilisateur perd 1 chance&#34;" comment="" color="ffffff" rotated="0"></instruction>
+													</qFalse>
+												</alternative>
+											</qWhile>
+										</while>
+									</qWhile>
+								</while>
+								<alternative text="&#34;Si l'utilisateur quitte la partie&#34;" comment="" color="ffffff">
+									<qTrue>
+										<instruction text="&#34;Fin du programme&#34;" comment="" color="ffffff" rotated="0"></instruction>
+									</qTrue>
+									<qFalse>
+									</qFalse>
+								</alternative>
+							</qWhile>
+						</while>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;Si l'utilisateur souhaite créer un nouveau mot&#34;" comment="&#34;&#34;" color="ffffff">
+							<qTrue>
+								<instruction text="&#34;Ouverture du formulaire &#34;&#34;Nouveau mot&#34;&#34;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;Fin du programme&#34;" comment="&#34;&#34;" color="ffffff" rotated="0"></instruction>
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qPara>
+			<qPara>
+			</qPara>
+		</parallel>
+	</children>
+</root>
