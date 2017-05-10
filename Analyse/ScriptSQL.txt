@@ -7,10 +7,9 @@
 -- Table: t_image
 ------------------------------------------------------------*/
 CREATE TABLE t_image(
-	id_image INT IDENTITY (1,1) NOT NULL ,
-	imaLien  VARCHAR (100) NOT NULL UNIQUE,
-	fkmot   INT  NOT NULL ,
-	CONSTRAINT prk_constraint_t_image PRIMARY KEY NONCLUSTERED (id_image)
+	idImage INT IDENTITY (1,1) NOT NULL ,
+	imaLien VARCHAR (100) NOT NULL UNIQUE,
+	CONSTRAINT prk_constraint_t_image PRIMARY KEY NONCLUSTERED (idImage)
 );
 
 
@@ -18,10 +17,9 @@ CREATE TABLE t_image(
 -- Table: t_mot
 ------------------------------------------------------------*/
 CREATE TABLE t_mot(
-	id_mot   INT IDENTITY (1,1) NOT NULL ,
-	motMot   VARCHAR (25) NOT NULL UNIQUE,
-	fktheme INT  NOT NULL ,
-	CONSTRAINT prk_constraint_t_mot PRIMARY KEY NONCLUSTERED (id_mot)
+	idMot  INT IDENTITY (1,1) NOT NULL ,
+	motMot VARCHAR (25) NOT NULL UNIQUE,
+	CONSTRAINT prk_constraint_t_mot PRIMARY KEY NONCLUSTERED (idMot)
 );
 
 
@@ -29,12 +27,34 @@ CREATE TABLE t_mot(
 -- Table: t_theme
 ------------------------------------------------------------*/
 CREATE TABLE t_theme(
-	id_theme INT IDENTITY (1,1) NOT NULL ,
+	idtheme  INT IDENTITY (1,1) NOT NULL ,
 	theTheme VARCHAR (25) NOT NULL UNIQUE,
-	CONSTRAINT prk_constraint_t_theme PRIMARY KEY NONCLUSTERED (id_theme)
+	CONSTRAINT prk_constraint_t_theme PRIMARY KEY NONCLUSTERED (idtheme)
+);
+
+
+/*------------------------------------------------------------
+-- Table: t_decrire
+------------------------------------------------------------*/
+CREATE TABLE t_decrire(
+	idImage INT  NOT NULL ,
+	idMot   INT  NOT NULL ,
+	CONSTRAINT prk_constraint_t_decrire PRIMARY KEY NONCLUSTERED (idImage,idMot)
+);
+
+
+/*------------------------------------------------------------
+-- Table: t_appartenir
+------------------------------------------------------------*/
+CREATE TABLE t_appartenir(
+	idMot   INT  NOT NULL ,
+	idtheme INT  NOT NULL ,
+	CONSTRAINT prk_constraint_t_appartenir PRIMARY KEY NONCLUSTERED (idMot,idtheme)
 );
 
 
 
-ALTER TABLE t_image ADD CONSTRAINT FK_t_image_id_mot FOREIGN KEY (fkmot) REFERENCES t_mot(id_mot);
-ALTER TABLE t_mot ADD CONSTRAINT FK_t_mot_id_theme FOREIGN KEY (fktheme) REFERENCES t_theme(id_theme);
+ALTER TABLE t_decrire ADD CONSTRAINT FK_t_decrire_idImage FOREIGN KEY (idImage) REFERENCES t_image(idImage);
+ALTER TABLE t_decrire ADD CONSTRAINT FK_t_decrire_idMot FOREIGN KEY (idMot) REFERENCES t_mot(idMot);
+ALTER TABLE t_appartenir ADD CONSTRAINT FK_t_appartenir_idMot FOREIGN KEY (idMot) REFERENCES t_mot(idMot);
+ALTER TABLE t_appartenir ADD CONSTRAINT FK_t_appartenir_idtheme FOREIGN KEY (idtheme) REFERENCES t_theme(idtheme);
