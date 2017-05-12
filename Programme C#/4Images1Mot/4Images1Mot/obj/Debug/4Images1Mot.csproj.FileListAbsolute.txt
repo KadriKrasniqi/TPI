@@ -1,0 +1,10 @@
+c:\users\krasniqika\documents\visual studio 2015\Projects\4Images1Mot\4Images1Mot\bin\Debug\4Images1Mot.exe.config
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\bin\Debug\4Images1Mot.exe
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\bin\Debug\4Images1Mot.pdb
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\4Images1Mot.csprojResolveAssemblyReference.cache
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\_4Images1Mot.FormMenu.resources
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\_4Images1Mot.Properties.Resources.resources
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\4Images1Mot.csproj.GenerateResource.Cache
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\4Images1Mot.exe
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\4Images1Mot.pdb
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\_4Images1Mot.FormNew.resources
