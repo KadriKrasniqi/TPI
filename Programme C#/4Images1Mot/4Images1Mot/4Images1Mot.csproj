@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbConnexion.cs" />
-    <Compile Include="executeRequest.cs" />
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,7 +59,8 @@
     <Compile Include="FormNew.Designer.cs">
       <DependentUpon>FormNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="mot.cs" />
+    <Compile Include="getImageMot.cs" />
+    <Compile Include="getMotTheme.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMenu.resx">
