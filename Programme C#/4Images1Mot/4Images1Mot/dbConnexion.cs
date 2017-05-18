@@ -103,8 +103,7 @@ namespace _4Images1Mot
                 {
                     idImage = reader.GetInt32(0),
                     lienImage = reader.GetString(1)
-                });
-                
+                });                
             }
             dc_connection.Close();
 

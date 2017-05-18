@@ -33,7 +33,7 @@
             this.cb_theme = new System.Windows.Forms.ComboBox();
             this.btn_parcourir = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lv_lienImage = new System.Windows.Forms.ListView();
             this.Répertoire = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -85,16 +85,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // listView1
+            // lv_lienImage
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_lienImage.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Répertoire});
-            this.listView1.Location = new System.Drawing.Point(12, 168);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(211, 102);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lv_lienImage.Location = new System.Drawing.Point(12, 168);
+            this.lv_lienImage.Name = "lv_lienImage";
+            this.lv_lienImage.Size = new System.Drawing.Size(211, 102);
+            this.lv_lienImage.TabIndex = 4;
+            this.lv_lienImage.UseCompatibleStateImageBehavior = false;
+            this.lv_lienImage.View = System.Windows.Forms.View.Details;
             // 
             // Répertoire
             // 
@@ -116,7 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(235, 327);
             this.Controls.Add(this.btn_ajouter);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lv_lienImage);
             this.Controls.Add(this.btn_parcourir);
             this.Controls.Add(this.cb_theme);
             this.Controls.Add(this.tb_mot);
@@ -137,7 +137,7 @@
         private System.Windows.Forms.ComboBox cb_theme;
         private System.Windows.Forms.Button btn_parcourir;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lv_lienImage;
         private System.Windows.Forms.ColumnHeader Répertoire;
         private System.Windows.Forms.Button btn_ajouter;
     }

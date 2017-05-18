@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,8 @@ namespace _4Images1Mot
             cb_theme.SelectedIndex = 0;
         }
 
+        int int_noImage = 0;
+
         private void btn_parcourir_Click(object sender, EventArgs e)
         {
             //Ouverture de l'explorer windows au bon endroit
@@ -30,7 +33,17 @@ namespace _4Images1Mot
             }
             if (openFileDialog1.FileName != "openFileDialog1")
             {
-                listView1.Items.Add(openFileDialog1.FileName);
+                //Afficher le lien dans la liste
+                lv_lienImage.Items.Add(openFileDialog1.FileName);
+
+                string str_mot = tb_mot.Text;
+
+                //Répertoire ou l'image sera copier
+                string str_destination = @".\images\"+ str_mot + "" + int_noImage + ".png";
+                int_noImage++;
+
+                //Copie de l'image dans le répertoire
+                File.Copy(openFileDialog1.FileName, str_destination);
             }
         }
     }
