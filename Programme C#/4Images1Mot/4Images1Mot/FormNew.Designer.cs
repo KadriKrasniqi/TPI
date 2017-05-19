@@ -109,6 +109,7 @@
             this.btn_ajouter.TabIndex = 5;
             this.btn_ajouter.Text = "Ajouter";
             this.btn_ajouter.UseVisualStyleBackColor = true;
+            this.btn_ajouter.Click += new System.EventHandler(this.btn_ajouter_Click);
             // 
             // FormNew
             // 
@@ -124,7 +125,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormNew";
-            this.Text = "FormNew";
+            this.Text = "Nouveau mot";
             this.ResumeLayout(false);
             this.PerformLayout();
 

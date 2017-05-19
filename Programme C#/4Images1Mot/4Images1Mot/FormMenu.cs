@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _4Images1Mot
@@ -63,7 +59,7 @@ namespace _4Images1Mot
             //Appel du premier mot
             if(lst_motOfTheme.Count == 0)
             {
-                MessageBox.Show("Le thème que vous avez choisi ne contient aucun mot. Veuillez-choisir un autre thème.","Aucun mot", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Le thème que vous avez choisi ne contient aucun mot. Veuillez-choisir un autre thème.","Aucun mot", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -175,7 +171,7 @@ namespace _4Images1Mot
                 {
                     btn_quitter_Click(sender, e);
 
-                    MessageBox.Show("Bravo ! Vous avez trouvé tous les mots du thème. Veuillez-choisir un nouveau thème.\n\n Nombre de point(s) : "+ int_point, "Bravo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Bravo ! Vous avez trouvé tous les mots du thème. Veuillez-choisir un nouveau thème.\n\n Nombre de point(s) : "+ int_point, "Bravo!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else

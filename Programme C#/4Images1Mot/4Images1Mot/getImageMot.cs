@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _4Images1Mot
+﻿namespace _4Images1Mot
 {
+    /// <summary>
+    /// Liste d'objet permettant de récuperer les images d'un mot
+    /// </summary>
     class getImageMot
     {
         public int idImage { get; set; }
