@@ -60,6 +60,7 @@
             // cb_theme
             // 
             this.cb_theme.DisplayMember = "1";
+            this.cb_theme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_theme.FormattingEnabled = true;
             this.cb_theme.Items.AddRange(new object[] {
             "Informatique",

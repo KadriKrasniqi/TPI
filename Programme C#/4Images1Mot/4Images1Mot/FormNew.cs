@@ -24,25 +24,24 @@ namespace _4Images1Mot
         int int_noImage = 0;
 
         /// <summary>
-        /// 
+        /// Ajouter une nouvelle image
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btn_parcourir_Click(object sender, EventArgs e)
         {
                 //Ouverture de l'explorer windows au bon endroit
-                openFileDialog1.Filter = "Cursor Files| *.png";
+                openFileDialog1.Filter = "PNG|*.png|JPG|*.jpg;*.jpeg|BMP|*.bmp";
                 openFileDialog1.Title = "Selectioner un fichier";
 
                 if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                 }
-                if (openFileDialog1.FileName != "openFileDialog1")
+                if (openFileDialog1.FileName != "openFileDialog1" && openFileDialog1.FileName != "")
                 {
                     //Afficher le lien dans la liste
                     lv_lienImage.Items.Add(openFileDialog1.FileName);                    
-                }
-            
+                }            
         }
 
         /// <summary>
@@ -62,8 +61,16 @@ namespace _4Images1Mot
                 //Si le mot contient bien 4 images
                 if(lv_lienImage.Items.Count == 4)
                 {
+                    //Initialisation de la classe dbConnexion
+                    dbConnexion fn_connexion = new dbConnexion();
+
+                    int idtheme = cb_theme.SelectedIndex + 1;
+
+                    //Appel de la fonction pour inserer le nouveau mot
+                    string idmot = fn_connexion.insertMot(tb_mot.Text, Convert.ToString(idtheme));
+
                     //Copier les images dans un répertoire spécifique
-                    for(int i = 0; i < lv_lienImage.Items.Count; i++)
+                    for (int i = 0; i < lv_lienImage.Items.Count; i++)
                     {
                         //Récuperer le nouveau mot
                         string str_mot = tb_mot.Text;
@@ -76,21 +83,9 @@ namespace _4Images1Mot
                         if (!File.Exists(str_destination))
                         {
                             File.Copy(Convert.ToString(lv_lienImage.Items[i].Text), str_destination);
+                            fn_connexion.insertImage(str_destination, idmot);
                         }
-                    }
-                    //Initialisation de la classe dbConnexion
-                    dbConnexion fn_connexion = new dbConnexion();
-
-                    int idtheme = cb_theme.SelectedIndex + 1;
-
-                    //Appel de la fonction pour inserer le nouveau mot
-                    string idmot = fn_connexion.insertMot(tb_mot.Text, Convert.ToString(idtheme));
-                    
-                    //Boucle pour inserer les images dans la base de données
-                    for(int j = 0; j < lv_lienImage.Items.Count; j++)
-                    {
-                        fn_connexion.insertImage(lv_lienImage.Items[j].Text, idmot);
-                    }                                        
+                    }                        
                 }
                 else
                 {
