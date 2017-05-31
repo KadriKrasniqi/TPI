@@ -34,6 +34,17 @@ CREATE TABLE t_theme(
 
 
 /*------------------------------------------------------------
+-- Table: t_connexion
+------------------------------------------------------------*/
+CREATE TABLE t_connexion(
+	idConnexion    INT IDENTITY (1,1) NOT NULL ,
+	conIdentifiant VARCHAR (25) NOT NULL UNIQUE,
+	conMotDePasse  VARCHAR (50) NOT NULL ,
+	CONSTRAINT prk_constraint_t_connexion PRIMARY KEY NONCLUSTERED (idConnexion)
+);
+
+
+/*------------------------------------------------------------
 -- Table: t_decrire
 ------------------------------------------------------------*/
 CREATE TABLE t_decrire(
