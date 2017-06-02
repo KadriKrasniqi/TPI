@@ -15,13 +15,68 @@ namespace _4Images1Mot
         public dbConnexion(string str_connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=4images1mot;Connect Timeout=30;ApplicationIntent=ReadWrite")
         {
             dc_connection = new SqlConnection(str_connection);
-            
-
         }
 
         public void Dispose()
         {
             dc_connection.Close();
+        }
+
+        /// <summary>
+        /// Verifier si le mot existe déjà ou pas
+        /// </summary>
+        /// <param name="mot">Nouveau mot à inserer</param>
+        /// <returns></returns>
+        public string getMot(string mot)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT idMot FROM t_mot WHERE motMot = @mot";
+            cmd.Parameters.Add("@mot", mot);
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = dc_connection;
+
+            dc_connection.Open();
+
+            var reader = cmd.ExecuteReader();
+
+            string str_idMot = "";
+
+            while (reader.Read())
+            {
+                str_idMot = Convert.ToString(reader.GetValue(0));
+            }
+            dc_connection.Close();
+            return str_idMot;
+        }
+
+        /// <summary>
+        /// Recuperer les informations du compte administrateur
+        /// </summary>
+        /// <returns></returns>
+        public List<getCompteAdmin> getCompteAdmin()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT conIdentifiant, conMotDePasse FROM t_connexion WHERE idConnexion = 1";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = dc_connection;
+
+            dc_connection.Open();
+
+            var reader = cmd.ExecuteReader();
+
+            List<getCompteAdmin> lst_getCompteAdmin = new List<getCompteAdmin>();
+
+            while (reader.Read())
+            {
+                lst_getCompteAdmin.Add(new getCompteAdmin()
+                {
+                    conIdentifiant = reader.GetString(0),
+                    conMotDePasse = reader.GetString(1)
+                });
+            }
+            dc_connection.Close();
+
+            return lst_getCompteAdmin;
         }
         
         /// <summary>

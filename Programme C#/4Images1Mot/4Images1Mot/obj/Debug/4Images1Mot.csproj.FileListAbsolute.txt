@@ -8,3 +8,4 @@ C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mo
 C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\4Images1Mot.exe
 C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\4Images1Mot.pdb
 C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\_4Images1Mot.FormNew.resources
+C:\Users\krasniqika\Documents\Visual Studio 2015\Projects\4Images1Mot\4Images1Mot\obj\Debug\_4Images1Mot.connexionAdmin.resources

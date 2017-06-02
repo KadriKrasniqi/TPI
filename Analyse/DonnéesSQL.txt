@@ -1,0 +1,372 @@
+USE [4images1mot]
+GO
+SET IDENTITY_INSERT [dbo].[t_mot] ON 
+
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (1, N'adobe')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (2, N'programmation')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (1002, N'support')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (6004, N'football')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (6005, N'tennis')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (6006, N'rome')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (7002, N'console')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (8002, N'droit')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (8003, N'économie')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (9002, N'hardware')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (9003, N'rugby')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (9004, N'arcade')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (10002, N'aventure')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (10003, N'action')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (10004, N'athlétisme')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (10005, N'éléments')
+GO
+INSERT [dbo].[t_mot] ([idMot], [motMot]) VALUES (11002, N'e-sport')
+GO
+SET IDENTITY_INSERT [dbo].[t_mot] OFF
+GO
+SET IDENTITY_INSERT [dbo].[t_image] ON 
+
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (8, N'.\images\adobe2.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7, N'.\images\adobe1.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (9, N'.\images\adobe3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (10, N'.\images\adobe4.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1007, N'.\images\prog1.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1008, N'.\images\prog2.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1009, N'.\images\prog3.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1010, N'.\images\prog4.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1011, N'.\images\info1.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1012, N'.\images\info2.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3015, N'.\images\football0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3016, N'.\images\football1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3017, N'.\images\football2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3018, N'.\images\football3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3019, N'.\images\tennis0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3020, N'.\images\tennis1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3021, N'.\images\tennis2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3022, N'.\images\tennis3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3023, N'.\images\rome0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3024, N'.\images\rome1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3025, N'.\images\rome2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (3026, N'.\images\rome3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (4007, N'.\images\console0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (4008, N'.\images\console1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (4009, N'.\images\console2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (4010, N'.\images\console3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5007, N'.\images\droit0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5008, N'.\images\droit1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5009, N'.\images\droit2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5010, N'.\images\droit3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5011, N'.\images\économie0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5012, N'.\images\économie1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5013, N'.\images\économie2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (5014, N'.\images\économie3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6007, N'.\images\hardware0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6008, N'.\images\hardware1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6009, N'.\images\hardware2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6010, N'.\images\hardware3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6011, N'.\images\rugby0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6012, N'.\images\rugby1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6013, N'.\images\rugby2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6014, N'.\images\rugby3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6015, N'.\images\arcade0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6016, N'.\images\arcade1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6017, N'.\images\arcade2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (6018, N'.\images\arcade3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7007, N'.\images\aventure0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7008, N'.\images\aventure1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7009, N'.\images\aventure2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7010, N'.\images\aventure3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7011, N'.\images\action0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7012, N'.\images\action1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7013, N'.\images\action2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7014, N'.\images\action3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7015, N'.\images\athlétisme0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7016, N'.\images\athlétisme1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7017, N'.\images\athlétisme2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7018, N'.\images\athlétisme3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7019, N'.\images\éléments0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7020, N'.\images\éléments1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7021, N'.\images\éléments2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (7022, N'.\images\éléments3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (8007, N'.\images\e-sport0.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (8008, N'.\images\e-sport1.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (8009, N'.\images\e-sport2.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (8010, N'.\images\e-sport3.png')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1013, N'.\images\info3.jpg')
+GO
+INSERT [dbo].[t_image] ([idImage], [imaLien]) VALUES (1014, N'.\images\info4.jpg')
+GO
+SET IDENTITY_INSERT [dbo].[t_image] OFF
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7, 1)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (8, 1)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (9, 1)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (10, 1)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1007, 2)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1008, 2)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1009, 2)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1010, 2)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1011, 1002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1012, 1002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1013, 1002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (1014, 1002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3015, 6004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3016, 6004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3017, 6004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3018, 6004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3019, 6005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3020, 6005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3021, 6005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3022, 6005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3023, 6006)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3024, 6006)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3025, 6006)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (3026, 6006)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (4007, 7002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (4008, 7002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (4009, 7002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (4010, 7002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5007, 8002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5008, 8002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5009, 8002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5010, 8002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5011, 8003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5012, 8003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5013, 8003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (5014, 8003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6007, 9002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6008, 9002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6009, 9002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6010, 9002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6011, 9003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6012, 9003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6013, 9003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6014, 9003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6015, 9004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6016, 9004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6017, 9004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (6018, 9004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7007, 10002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7008, 10002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7009, 10002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7010, 10002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7011, 10003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7012, 10003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7013, 10003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7014, 10003)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7015, 10004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7016, 10004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7017, 10004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7018, 10004)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7019, 10005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7020, 10005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7021, 10005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (7022, 10005)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (8007, 11002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (8008, 11002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (8009, 11002)
+GO
+INSERT [dbo].[t_decrire] ([idImage], [idMot]) VALUES (8010, 11002)
+GO
+SET IDENTITY_INSERT [dbo].[t_theme] ON 
+
+GO
+INSERT [dbo].[t_theme] ([idtheme], [theTheme]) VALUES (1, N'Informatique')
+GO
+INSERT [dbo].[t_theme] ([idtheme], [theTheme]) VALUES (2, N'Culture générale')
+GO
+INSERT [dbo].[t_theme] ([idtheme], [theTheme]) VALUES (3, N'Sport')
+GO
+INSERT [dbo].[t_theme] ([idtheme], [theTheme]) VALUES (4, N'Jeux vidéo')
+GO
+SET IDENTITY_INSERT [dbo].[t_theme] OFF
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (1, 1)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (2, 1)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (1002, 1)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (6004, 3)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (6005, 3)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (6006, 2)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (7002, 4)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (8002, 2)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (8003, 2)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (9002, 1)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (9003, 3)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (9004, 4)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (10002, 4)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (10003, 4)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (10004, 3)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (10005, 2)
+GO
+INSERT [dbo].[t_appartenir] ([idMot], [idtheme]) VALUES (11002, 4)
+GO
+SET IDENTITY_INSERT [dbo].[t_connexion] ON 
+
+GO
+INSERT [dbo].[t_connexion] ([idConnexion], [conIdentifiant], [conMotDePasse]) VALUES (1, N'admin', N'94bb24bf2cd7299d4ee7b4be93c5268905f28a03')
+GO
+SET IDENTITY_INSERT [dbo].[t_connexion] OFF
+GO

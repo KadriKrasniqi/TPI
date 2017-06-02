@@ -66,30 +66,58 @@ namespace _4Images1Mot
 
                     int idtheme = cb_theme.SelectedIndex + 1;
 
-                    //Appel de la fonction pour inserer le nouveau mot
-                    string idmot = fn_connexion.insertMot(tb_mot.Text, Convert.ToString(idtheme));
+                    //Verifier si le mot existe déjà
+                    string existMot = fn_connexion.getMot(tb_mot.Text);
 
-                    //Copier les images dans un répertoire spécifique
-                    for (int i = 0; i < lv_lienImage.Items.Count; i++)
+                    //Si le mot n'est pas dans la base de données
+                    if (existMot == "")
                     {
-                        //Récuperer le nouveau mot
-                        string str_mot = tb_mot.Text;
+                        //Appel de la fonction pour inserer le nouveau mot
+                        string idmot = fn_connexion.insertMot(tb_mot.Text, Convert.ToString(idtheme));
 
-                        //Répertoire ou l'image sera copier
-                        string str_destination = @".\images\" + str_mot + "" + int_noImage + ".png";
-                        int_noImage++;
-
-                        //Copie de l'image dans le répertoire
-                        if (!File.Exists(str_destination))
+                        //Copier les images dans un répertoire spécifique
+                        for (int i = 0; i < lv_lienImage.Items.Count; i++)
                         {
-                            File.Copy(Convert.ToString(lv_lienImage.Items[i].Text), str_destination);
-                            fn_connexion.insertImage(str_destination, idmot);
+                            //Récuperer le nouveau mot
+                            string str_mot = tb_mot.Text;
+
+                            //Répertoire ou l'image sera copier
+                            string str_destination = @".\images\" + str_mot + "" + int_noImage + ".png";
+                            int_noImage++;
+
+                            //Copie de l'image dans le répertoire
+                            if (!File.Exists(str_destination))
+                            {
+                                File.Copy(Convert.ToString(lv_lienImage.Items[i].Text), str_destination);
+                                fn_connexion.insertImage(str_destination, idmot);
+                            }
                         }
+                    }
+                    //Si le mot est dans la base de données
+                    else
+                    {
+                        MessageBox.Show("Le mot que vous souhaitez insérer existe déjà dans la base de données.", "Mot existant", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }                        
                 }
                 else
                 {
                     MessageBox.Show("Veuillez inserer 4 images.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Supprimer le lien d'une image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lv_lienImage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (Keys.Delete == e.KeyCode)
+            {
+                foreach (ListViewItem listViewItem in ((ListView)sender).SelectedItems)
+                {
+                    listViewItem.Remove();
                 }
             }
         }

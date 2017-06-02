@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace _4Images1Mot
@@ -127,8 +129,23 @@ namespace _4Images1Mot
         /// <param name="e"></param>
         private void btn_new_Click(object sender, EventArgs e)
         {
-            FormNew formNewWord = new FormNew();
-            formNewWord.Show();
+            connexionAdmin ca = new connexionAdmin();
+            ca.Show();
+                    
+           
+            
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private string Hash(string input)
+        {
+            var hash = (new SHA1Managed()).ComputeHash(Encoding.UTF8.GetBytes(input));
+            return string.Join("", hash.Select(b => b.ToString("x2")).ToArray());
         }
 
         /// <summary>

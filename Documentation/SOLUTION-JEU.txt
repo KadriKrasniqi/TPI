@@ -1,0 +1,28 @@
+Informatique : 
+
+	1)	adobe
+	2)	programmation
+	3)	support	
+	4)	hardware
+
+Culture générale :
+
+	1)	rome
+	2)	droit
+	3)	économie
+	4)	éléments
+
+Sport :
+
+	1)	football
+	2)	tennis
+	3)	rugby
+	4)	athlétisme
+
+Jeux vidéo :
+
+	1)	console
+	2)	arcade
+	3)	aventure
+	4)	action
+	5)	e-sport

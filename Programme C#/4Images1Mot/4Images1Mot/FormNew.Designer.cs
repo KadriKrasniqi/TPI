@@ -96,6 +96,7 @@
             this.lv_lienImage.TabIndex = 4;
             this.lv_lienImage.UseCompatibleStateImageBehavior = false;
             this.lv_lienImage.View = System.Windows.Forms.View.Details;
+            this.lv_lienImage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lv_lienImage_KeyDown);
             // 
             // Répertoire
             // 
