@@ -86,24 +86,31 @@ namespace _4Images1Mot
             //Initialisation de variables pour le mélange des lettres
             Random rnd = new Random();
             char temp;
-            char[] chars = mot.ToCharArray();
-            int int_nbChar = chars.Length;
+            List<char> chars = mot.ToList();
+            Random rdm = new Random();
+
+            for (int i = 0; i < 3; i++)
+            {
+                char tmp_char = (char)rdm.Next('a', 'z');
+
+                chars.Add(tmp_char);                
+            }
 
             //Boucle pour mélanger les lettres du mot aléatoirement
-            for (int i = 0; i < int_nbChar; i++)
+            for (int i = 0; i < chars.Count; i++)
             {
-                int j = rnd.Next(0, int_nbChar - 1);
+                int j = rnd.Next(0, chars.Count - 1);
                 temp = chars[i];
                 chars[i] = chars[j];
                 chars[j] = temp;
             }
             //Récuperer le tableau de lettres dans une chaine de caractère
-            string str_MotMelange = new string(chars);
+            string str_MotMelange = new string(chars.ToArray());
 
             //Affichage des lettres mélangées dans la richTextBox
             rtb_MotAleatoire.Text = str_MotMelange;
             rtb_MotAleatoire.SelectAll();
-            rtb_MotAleatoire.SelectionFont = new Font("TimesNewRoman", 20, FontStyle.Bold);
+            rtb_MotAleatoire.SelectionFont = new Font("TimesNewRoman", 18, FontStyle.Bold);
             rtb_MotAleatoire.SelectionAlignment = HorizontalAlignment.Center;
 
             //Initialisation de la classe dbconnexion
@@ -131,21 +138,6 @@ namespace _4Images1Mot
         {
             connexionAdmin ca = new connexionAdmin();
             ca.Show();
-                    
-           
-            
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        private string Hash(string input)
-        {
-            var hash = (new SHA1Managed()).ComputeHash(Encoding.UTF8.GetBytes(input));
-            return string.Join("", hash.Select(b => b.ToString("x2")).ToArray());
         }
 
         /// <summary>
@@ -199,6 +191,11 @@ namespace _4Images1Mot
             }
         }
 
+        /// <summary>
+        /// Clic sur la textbox pour ecrire la réponse
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tb_reponse_Click(object sender, EventArgs e)
         {
             if(tb_reponse.Text == "Réponse ?")
@@ -251,7 +248,7 @@ namespace _4Images1Mot
             pnl_jeu.Controls.Add(pb_ima4);
 
             rtb_MotAleatoire.BorderStyle = BorderStyle.None;
-            rtb_MotAleatoire.Size = new Size(210, 50);
+            rtb_MotAleatoire.Size = new Size(210, 57);
             rtb_MotAleatoire.Location = new Point(12, 460);
             rtb_MotAleatoire.Enabled = false;
             pnl_jeu.Controls.Add(rtb_MotAleatoire);
@@ -263,7 +260,7 @@ namespace _4Images1Mot
             pnl_jeu.Controls.Add(tb_reponse);
 
             lbl_point.Text = "Point(s) : " + int_point;
-            lbl_point.Location = new Point(235, 490);
+            lbl_point.Location = new Point(235, 500);
             pnl_jeu.Controls.Add(lbl_point);
 
             Button btn_valider = new Button();
@@ -274,7 +271,7 @@ namespace _4Images1Mot
             pnl_jeu.Controls.Add(btn_valider);
 
             Button btn_quitter = new Button();
-            btn_quitter.Location = new Point(370, 490);
+            btn_quitter.Location = new Point(370, 500);
             btn_quitter.Text = "Quitter";
             btn_quitter.FlatStyle = FlatStyle.System;
             btn_quitter.Click += new System.EventHandler(btn_quitter_Click);

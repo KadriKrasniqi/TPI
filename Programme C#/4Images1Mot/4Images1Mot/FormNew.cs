@@ -92,6 +92,11 @@ namespace _4Images1Mot
                                 fn_connexion.insertImage(str_destination, idmot);
                             }
                         }
+                        MessageBox.Show("Votre mot a bien été inséré dans la base de données.", "Terminé", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        tb_mot.Text = "";
+                        cb_theme.SelectedIndex = 0;
+                        lv_lienImage.Items.Clear();
                     }
                     //Si le mot est dans la base de données
                     else

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNew));
             this.lbl_Titre = new System.Windows.Forms.Label();
             this.tb_mot = new System.Windows.Forms.TextBox();
             this.cb_theme = new System.Windows.Forms.ComboBox();
@@ -125,6 +126,7 @@
             this.Controls.Add(this.tb_mot);
             this.Controls.Add(this.lbl_Titre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormNew";
             this.Text = "Nouveau mot";

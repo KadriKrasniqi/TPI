@@ -85,7 +85,7 @@
             this.btn_jeux.Name = "btn_jeux";
             this.btn_jeux.Size = new System.Drawing.Size(117, 47);
             this.btn_jeux.TabIndex = 3;
-            this.btn_jeux.Text = "jeux vidéo";
+            this.btn_jeux.Text = "Jeux vidéo";
             this.btn_jeux.UseVisualStyleBackColor = true;
             this.btn_jeux.Click += new System.EventHandler(this.ChoixTheme);
             // 
@@ -139,6 +139,7 @@
             this.ClientSize = new System.Drawing.Size(304, 312);
             this.Controls.Add(this.pnl_ChoixTheme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormMenu";
             this.Text = "4 images 1 mot";
